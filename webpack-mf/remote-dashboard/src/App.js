@@ -1,11 +1,13 @@
-import React from "react";
+import React from 'react';
+import DashboardApp from './pages/DashboardApp';
+import ThemeProvider from './theme';
 
-const App = () =>{
-    return (
-        <h1>
-            Hello world! I am using React
-        </h1>
-    )
-}
+const App = () => {
+  return (
+    <ThemeProvider>
+      <DashboardApp />
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
