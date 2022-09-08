@@ -43,7 +43,7 @@ module.exports = {
       name: "remote_dashboard",
       filename: "remoteEntry.js",
       exposes: {
-        "./DashboardApp": "./src/pages/DashboardApp.js",        
+        "./DashboardApp": "./src/App.js",        
       },
       shared: {
         ...deps,

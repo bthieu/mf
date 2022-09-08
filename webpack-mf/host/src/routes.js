@@ -11,17 +11,18 @@ import DashboardLayout from './layouts/dashboard';
 // import Register from './pages/Register';
 // import Products from './pages/Products';
 // import DashboardApp from './pages/DashboardApp';
+import DashboardApp from 'remote_dashboard/DashboardApp';
 
 // ----------------------------------------------------------------------
 
 export default function Router() {
   return useRoutes([
     {
-      path: '/',
+      path: '/dashboard',
       element: <DashboardLayout />,
       children: [
 
-        { path: '', element: <div>app</div> },
+        { path: 'app', element: <DashboardApp /> },
         // { path: 'user', element: <User /> },
         // { path: 'products', element: <Products /> },
         // { path: 'blog', element: <Blog /> },
@@ -39,5 +40,6 @@ export default function Router() {
     //   ],
     // },
     // { path: '*', element: <Navigate to="/404" replace /> },
+    { path: '*', element: <Navigate to="/dashboard/app" replace /> },
   ]);
 }
