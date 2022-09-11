@@ -13,11 +13,11 @@ module.exports = {
 	},
 	target: 'web',
 	devServer: {
-		port: '5000',
+		port: '5003',
 		static: {
 			directory: path.join(__dirname, 'public'),
 		},
-		open: true,
+		open: false,
 		hot: true,
 		liveReload: true,
 	},
@@ -37,14 +37,13 @@ module.exports = {
 			},
 		],
 	},
+	devtool: "eval-source-map",
 	plugins: [
 		new ModuleFederationPlugin({
-      name: "host",
+      name: "remote_product",
       filename: "remoteEntry.js",
-			remotes: {
-        remote_dashboard: "remote_dashboard@http://localhost:5001/remoteEntry.js",
-				remote_user: "remote_user@http://localhost:5002/remoteEntry.js",
-				remote_product: "remote_product@http://localhost:5003/remoteEntry.js"
+      exposes: {
+        "./ProductApp": "./src/App.js",        
       },
       shared: {
         ...deps,
