@@ -12,6 +12,7 @@ import DashboardLayout from './layouts/dashboard';
 // import Products from './pages/Products';
 // import DashboardApp from './pages/DashboardApp';
 import DashboardApp from 'remote_dashboard/DashboardApp';
+import UserApp from 'remote_user/UserApp';
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +24,7 @@ export default function Router() {
       children: [
 
         { path: 'app', element: <DashboardApp /> },
-        // { path: 'user', element: <User /> },
+        { path: 'user', element: <UserApp /> },
         // { path: 'products', element: <Products /> },
         // { path: 'blog', element: <Blog /> },
       ],

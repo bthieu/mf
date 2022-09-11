@@ -42,7 +42,8 @@ module.exports = {
       name: "host",
       filename: "remoteEntry.js",
 			remotes: {
-        remote_dashboard: "remote_dashboard@http://localhost:5001/remoteEntry.js"        
+        remote_dashboard: "remote_dashboard@http://localhost:5001/remoteEntry.js",
+				remote_user: "remote_user@http://localhost:5002/remoteEntry.js"
       },
       shared: {
         ...deps,

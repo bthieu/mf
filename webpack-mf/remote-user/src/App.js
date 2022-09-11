@@ -1,11 +1,17 @@
-import React from "react";
+import React from 'react';
+// import { BrowserRouter } from 'react-router-dom';
+import User from './pages/User';
+import ThemeProvider from './theme';
 
-const App = () =>{
-    return (
-        <h1>
-            Hello world! I am using React
-        </h1>
-    )
-}
+const App = () => {
+  return (
+    <ThemeProvider>
+      {/* <BrowserRouter> */}
+        <User />
+      {/* </BrowserRouter> */}
+    </ThemeProvider>
+    
+  );
+};
 
-export default App
+export default App;
